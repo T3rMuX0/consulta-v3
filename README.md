@@ -15,6 +15,8 @@ obs: o script não retornar dados pessoais q possa compremeter auguem
 
 > pkg install git
 
+> git clone 
+
 > cd consulta-v3
 
 > pip install -r requirements.txt
