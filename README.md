@@ -15,7 +15,7 @@ obs: o script não retornar dados pessoais q possa compremeter auguem
 
 > pkg install git
 
-> git clone 
+> git clone https://github.com/T3rMuX0/consulta-v3.git
 
 > cd consulta-v3
 
