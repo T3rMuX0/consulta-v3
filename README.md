@@ -22,3 +22,14 @@ obs: o script não retornar dados pessoais q possa compremeter auguem
 > pip install -r requirements.txt
 
 > python3 consultav3.py
+
+
+
+em breve o script recebera melhorias e novas fontes como consulta 
+de telefone dominios nome rede socialis .
+
+contato 
+telegram 
+https://t.me/Aristoles001
+canal 
+https://t.me/termux_br
