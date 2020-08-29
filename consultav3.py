@@ -93,7 +93,7 @@ def menu():
     """)
 try:
     menu()
-    inpu=int(input(f'- {am}=+>{f} '))
+    inpu=str(input(f'- {am}=+>{f} '))
 except KeyboardInterrupt:
     exit()
 except:
