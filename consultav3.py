@@ -11,9 +11,9 @@ ng='\033[1m'
 f='\033[m'
 lz='\033[34m'   
 def ip():  
-    n1 = int(input(f'{vm}--={f}{az}[CONSULTA IP]{f}\n\n- {az}[{f}{lz}1{f}{az}]{f} {ng}ipapi{f}\n- {az}[{f}{lz}2{f}{az}]{f} {ng}ip{f}\n- {az}[{f}{lz}3{f}{az}]{f} {ng}ipfind{f}  \n- {am}+=>{f} '))         
+    n1 = int(input(f'{vm}--={f}{az}[CONSULTA IP]{f}\n\n- {az}[{f}{lz}01{f}{az}]{f} {ng}ipgeolocation{f}\n- {az}[{f}{lz}02{f}{az}]{f} {ng}ip{f}\n- {az}[{f}{lz}03{f}{az}]{f} {ng}ipfind{f}  \n- {am}+=>{f} '))         
     if n1 == 1:
-        ip1=input(f'{vm}--=={f}{az}[fonte IPAPI ]{f} \n{vm}--=={f}{az}[ ip ]{f} {am}+=>{f} ')
+        ip1=input(f'{vm}--=={f}{az}[fonte IPGEOLOCATION]{f} \n{vm}--=={f}{az}[ ip ]{f} {am}+=>{f} ')
         url1 = "https://api.ipgeolocation.io/ipgeo?apiKey=9313e7887bad45cea6d4b5845f085464&ip={}".format(ip1)
         res = requests.get(url1)
         req=res.json()
@@ -86,10 +86,10 @@ def menu():
  {az}<;︻╦╤─ ҉ - - - - - - - - - - - - -{f}	                            
 {vm}--=== >>{f} [  {vd} CONSULTA-V3 {f} ]  
     	 	       
-- {az}[{f}{lz}1{f}{az}]{f} {vd}IP {f}
-- {az}[{f}{lz}2{f}{az}]{f}{vd} CEP {f}
-- {az}[{f}{lz}3{f}{az}]{f} {vd}CNPJj {f}
-- {az}[{f}{lz}4{f}{az}]{f} {vd}SAIR{f}
+- {az}[{f}{lz}01{f}{az}]{f} {vd}CONSULTAR IP {f}
+- {az}[{f}{lz}02{f}{az}]{f}{vd}CONSULTAR CEP {f}
+- {az}[{f}{lz}03{f}{az}]{f} {vd}CONSULTAR CNPJ {f}
+- {az}[{f}{lz}04{f}{az}]{f} {vd}SAIR{f}
     """)
 try:
     menu()
@@ -99,13 +99,13 @@ except KeyboardInterrupt:
 except:
     print(f'{vm}- [!] error valor invalido {f}')
 try:    
-    if inpu==1:   
+    if inpu==1 or inpu==01:   
         os.system('clear');ban();ip()
-    elif inpu==2:
+    elif inpu==2 or inpu==02:
         os.system('clear');ban();cep()
-    elif inpu==3:
+    elif inpu==3 or inpu==03:
         os.system('clear');ban();cnpj()
-    elif inpu==4:
+    elif inpu==4 or inpu==03:
         exit()
     else:
         print(f'{vm}- [!] valor invalido !! {f}');exit()                                                                                          
