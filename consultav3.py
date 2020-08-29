@@ -64,7 +64,7 @@ def cep():
         else:
             print(f' {vm}[!] valor invalido \n digite apenas numeros \n {f}ex: {ng}01001000 {f}')            
 def cnpj():    
-    cpnj1=input(f'{vm}--=={f}{az}[fonte RECEITA ]{f} \n{vm}--=={f}{az}[ cpnj ]{f} {am}+=>{f} ')                           
+    cpnj1=input(f'{vm}--=={f}{az}[fonte RECEITA FEDERAL ]{f} \n{vm}--=={f}{az}[ cpnj ]{f} {am}+=>{f} ')                           
     url1='https://www.receitaws.com.br/v1/cnpj/{}'.format(cpnj1)
     res=requests.get(url1);req1=res.json()                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
     br="\n{}[+] CONSULTA REALIZADA PELO SCRIPT CONSULTA-V3 \n[+]by: ∆ristoteles {}\n{}-=[data_situacao]:{}\n-=[motivo_situacao]:{}\n-=[complemento]:{}\n-=[tipo]:{}\n-=[nome]:{}\n-=[telefone]:{}\n-=[situacao]:{}\n-=[bairro]:{}\n-=[logradouro]:{}\n-=[numero]:{}\n-=[cep]:{}\n-=[municipio]:{}\n-=[fantasia]:{}\n-=[porte]:{}\n-=[abertura]:{}\n-=[natureza_juridica]:{}\n-=[uf]:{}\n-=[cnpj]:{}\n-=[ultima_atualizacao]:{}\n-=[status]:{}\n-=[email]:{}\n-=[efr]:{}\n-=[situacao_especial]:{}\n-=[data_situacao_especial]:{}\n-=[atividade_principal]:{}\n-=[atividades_secundarias]:{}\n-=[capital_social]:{}\n-=[qsa]:{}\n-=[extra]:{}\n-=[billing]:{} {}".format(ng,f,vd,req1['data_situacao'],req1['motivo_situacao'],req1['complemento'],req1['tipo'],req1['nome'],req1['telefone'],req1['situacao'],req1['bairro'],req1['logradouro'],req1['numero'],req1['cep'],req1['municipio'],req1['fantasia'],req1['porte'],req1['abertura'],req1['natureza_juridica'],req1['uf'],req1['cnpj'],req1['ultima_atualizacao'],req1['status'],req1['email'],req1['efr'],req1['situacao_especial'],req1['data_situacao_especial'],req1['atividade_principal'],req1['atividades_secundarias'],req1['capital_social'],req1['qsa'],req1['extra'],req1['billing'],f)                  
@@ -87,7 +87,7 @@ def menu():
 {vm}--=== >>{f} [  {vd} CONSULTA-V3 {f} ]  
     	 	       
 - {az}[{f}{lz}01{f}{az}]{f} {vd}CONSULTAR IP {f}
-- {az}[{f}{lz}02{f}{az}]{f}{vd}CONSULTAR CEP {f}
+- {az}[{f}{lz}02{f}{az}]{f}{vd} CONSULTAR CEP {f}
 - {az}[{f}{lz}03{f}{az}]{f} {vd}CONSULTAR CNPJ {f}
 - {az}[{f}{lz}04{f}{az}]{f} {vd}SAIR{f}
     """)
@@ -99,13 +99,13 @@ except KeyboardInterrupt:
 except:
     print(f'{vm}- [!] error valor invalido {f}')
 try:    
-    if inpu==1 or inpu==01:   
+    if inpu=='1' or inpu=='01':   
         os.system('clear');ban();ip()
-    elif inpu==2 or inpu==02:
+    elif inpu=='2' or inpu=='02':
         os.system('clear');ban();cep()
-    elif inpu==3 or inpu==03:
+    elif inpu=='3\ or inpu=='03':
         os.system('clear');ban();cnpj()
-    elif inpu==4 or inpu==03:
+    elif inpu=='4' or inpu=='03':
         exit()
     else:
         print(f'{vm}- [!] valor invalido !! {f}');exit()                                                                                          
