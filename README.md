@@ -1,6 +1,6 @@
 # consulta-v3
 
-script criado com apis públicas para obter dados de ips cnpj cep 
+ferramenta onsint criado com apis públicas para obter dados de ips cnpj cep 
 obs: o script não retornar dados pessoais q possa compremeter auguem
 
 > INSTALAÇÃO NO TERMUX
